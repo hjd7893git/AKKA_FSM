@@ -1,20 +1,12 @@
-organization in ThisBuild := "me.rerun"
+name := "userAkka"
 
-name := """AkkaFSM"""
+version := "1.0"
 
-version := "0.1"
+scalaVersion := "2.11.2"
 
-scalaVersion := "2.11.7"
 
-scalacOptions := Seq("-feature", "-unchecked", "-deprecation", "-encoding", "utf8")
-
-libraryDependencies ++= {
-  val akkaV = "2.3.11"
-  Seq(
-    "com.typesafe.akka" %% "akka-actor" % akkaV,
-    "ch.qos.logback" % "logback-classic" % "1.1.3",
-    "com.typesafe.akka" %% "akka-slf4j" % akkaV,
-    "com.typesafe.akka" %% "akka-testkit" % akkaV % "test",
-    "org.scalatest" %% "scalatest" % "2.2.5" % "test"
-  )
-}
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor" % "2.3.4",
+  "com.typesafe.akka" %% "akka-testkit" % "2.3.6" % "test",
+  "org.scalatest" %% "scalatest" % "2.1.6" % "test"
+)
